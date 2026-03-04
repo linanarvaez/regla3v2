@@ -1,11 +1,27 @@
-<div align="center">
+# Regla 3-3-3 v2
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplicación de planificación diaria con arquitectura desacoplada.
 
-  <h1>Built with AI Studio</h2>
+## Estructura
+- **Frontend**: Next.js 14 (App Router) en `/frontend`.
+- **Backend**: FastAPI (Python) en `/backend`.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Requisitos
+- Node.js 18+
+- Python 3.10+
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Ejecución Local
 
-</div>
+### Backend
+1. `cd backend`
+2. `pip install -r requirements.txt`
+3. `uvicorn main:app --reload`
+
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
+
+## Notas
+- El backend utiliza SQLite por defecto para persistencia.
+- El frontend se comunica vía `NEXT_PUBLIC_API_BASE_URL`.

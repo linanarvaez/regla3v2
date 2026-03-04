@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --latam-blue: #001664;
+  --latam-red: #E60019;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
