@@ -39,7 +39,7 @@ export const CATEGORIES: { id: TaskCategory; label: string; color: string; descr
   { 
     id: 'micro', 
     label: 'Micro-gestiones', 
-    color: 'bg-latam-green', 
+    color: 'bg-latam-gray', 
     description: '3 tareas rápidas de menos de 10 minutos.' 
   },
 ];

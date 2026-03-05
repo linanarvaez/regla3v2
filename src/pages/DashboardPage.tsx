@@ -111,10 +111,12 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
       {/* Header */}
-      <header className="bg-white border-bottom border-slate-200 sticky top-0 z-10">
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="text-latam-blue font-bold text-xl">3-3-3</Link>
+            <Link to="/" className="flex items-center gap-2">
+              <span className="text-latam-blue font-bold text-lg tracking-tight">3-3-3</span>
+            </Link>
             <div className="h-4 w-[1px] bg-slate-200" />
             <select 
               value={user} 
@@ -241,7 +243,7 @@ export default function DashboardPage() {
                           <button 
                             onClick={() => toggleTask(cat.id, task.id)}
                             className={`shrink-0 transition-colors ${
-                              task.completed ? 'text-latam-green' : 'text-slate-300 hover:text-slate-400'
+                              task.completed ? 'text-latam-blue' : 'text-slate-300 hover:text-slate-400'
                             }`}
                           >
                             {task.completed ? <CheckCircle2 size={22} /> : <Circle size={22} />}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { USERS } from '../types';
 import { motion } from 'motion/react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, TrendingUp } from 'lucide-react';
 
 export default function HomePage() {
   const [selectedUser, setSelectedUser] = useState('');
@@ -15,22 +15,25 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-white">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-slate-50">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-md w-full text-center space-y-8"
       >
-        <div className="space-y-2">
-          <h1 className="text-5xl font-bold tracking-tighter text-latam-blue">
-            Regla 3-3-3
-          </h1>
-          <p className="text-slate-500 text-lg">
+        <div className="space-y-4">
+          <div className="space-y-1">
+            <h1 className="text-4xl font-bold tracking-tighter text-latam-blue">
+              Regla 3-3-3
+            </h1>
+            <div className="h-1 w-12 bg-latam-red mx-auto rounded-full" />
+          </div>
+          <p className="text-slate-500 text-sm">
             Planifica tu día con claridad: 3 tareas críticas, 3 administrativas y 3 micro-gestiones.
           </p>
         </div>
 
-        <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+        <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-latam-blue/5 space-y-6">
           <div className="text-left space-y-2">
             <label className="text-sm font-semibold text-slate-700 uppercase tracking-wider">
               Selecciona tu usuario
@@ -58,6 +61,16 @@ export default function HomePage() {
           >
             Ingresar
             <ChevronRight size={20} />
+          </button>
+        </div>
+
+        <div className="pt-4">
+          <button 
+            onClick={() => navigate('/team-kpis')}
+            className="text-sm font-bold text-latam-blue hover:underline flex items-center justify-center gap-1 mx-auto"
+          >
+            <TrendingUp size={16} />
+            KPIs Grupal (Control Jefatura)
           </button>
         </div>
 

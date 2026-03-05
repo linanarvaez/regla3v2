@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-latam-blue: #001664;
-  --color-latam-red: #E60019;
+  --color-latam-blue: #000066;
+  --color-latam-red: #e61e6e;
+  --color-latam-gray: #4d4d4d;
   --color-latam-green: #28a745;
   
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;

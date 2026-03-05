@@ -64,7 +64,9 @@ export default function HistoricoPage() {
             <Link to="/" className="p-2 hover:bg-slate-100 rounded-lg text-slate-600 transition-colors">
               <ArrowLeft size={20} />
             </Link>
-            <h1 className="font-bold text-xl text-slate-900">Histórico Global</h1>
+            <div className="flex items-center gap-3">
+              <h1 className="font-bold text-lg text-slate-900">Histórico Global</h1>
+            </div>
           </div>
         </div>
       </header>
@@ -109,9 +111,9 @@ export default function HistoricoPage() {
                       name="Cumplimiento %"
                       type="monotone" 
                       dataKey="compliance" 
-                      stroke="#001664" 
+                      stroke="#000066" 
                       strokeWidth={4}
-                      dot={{ r: 6, fill: '#001664', strokeWidth: 2, stroke: '#fff' }}
+                      dot={{ r: 6, fill: '#000066', strokeWidth: 2, stroke: '#fff' }}
                       activeDot={{ r: 8 }}
                     />
                   </LineChart>
@@ -144,7 +146,7 @@ export default function HistoricoPage() {
                         </td>
                         <td className="p-4 text-right">
                           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                            row.compliance >= 80 ? 'bg-green-100 text-green-700' : 
+                            row.compliance >= 80 ? 'bg-blue-100 text-[#000066]' : 
                             row.compliance >= 50 ? 'bg-amber-100 text-amber-700' : 
                             'bg-red-100 text-red-700'
                           }`}>

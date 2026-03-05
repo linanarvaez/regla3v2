@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.routes.tasks import router as tasks_router
+from src.routes.team import router as team_router
 from src.db.database import engine, Base
 
 Base.metadata.create_all(bind=engine)
@@ -20,3 +21,4 @@ def health_check():
     return {"status": "ok"}
 
 app.include_router(tasks_router)
+app.include_router(team_router)

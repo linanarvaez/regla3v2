@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import KPIsPage from './pages/KPIsPage';
 import HistoricoPage from './pages/HistoricoPage';
+import TeamKPIsPage from './pages/TeamKPIsPage';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/kpis" element={<KPIsPage />} />
         <Route path="/historico" element={<HistoricoPage />} />
+        <Route path="/team-kpis" element={<TeamKPIsPage />} />
       </Routes>
     </Router>
   );

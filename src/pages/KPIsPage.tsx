@@ -106,7 +106,7 @@ export default function KPIsPage() {
       value: categoryStats[cat.id].total > 0 
         ? Math.round((categoryStats[cat.id].completed / categoryStats[cat.id].total) * 100) 
         : 0,
-      color: cat.id === 'critical' ? '#001664' : cat.id === 'administrative' ? '#E60019' : '#28a745'
+      color: cat.id === 'critical' ? '#000066' : cat.id === 'administrative' ? '#e61e6e' : '#4d4d4d'
     }));
 
     // Find category with most "atraso" (lowest completion)
@@ -132,7 +132,9 @@ export default function KPIsPage() {
             <Link to={`/dashboard?user=${selectedUser}`} className="p-2 hover:bg-slate-100 rounded-lg text-slate-600 transition-colors">
               <ArrowLeft size={20} />
             </Link>
-            <h1 className="font-bold text-xl text-slate-900">Métricas y KPIs</h1>
+            <div className="flex items-center gap-3">
+              <h1 className="font-bold text-lg text-slate-900">Métricas y KPIs</h1>
+            </div>
           </div>
           <div className="flex items-center gap-2">
             <Link 
@@ -196,7 +198,7 @@ export default function KPIsPage() {
           <KPICard 
             title="Días Perfectos" 
             value={stats.daysWith100Percent} 
-            icon={<CheckCircle className="text-latam-green" />}
+            icon={<CheckCircle className="text-[#000066]" />}
             description="Días con 100% de cumplimiento"
           />
           <KPICard 
@@ -268,7 +270,7 @@ export default function KPIsPage() {
                     cursor={{ fill: '#f8fafc' }}
                     contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
                   />
-                  <Bar dataKey="completion" fill="#001664" radius={[4, 4, 0, 0]} barSize={24} />
+                  <Bar dataKey="completion" fill="#000066" radius={[4, 4, 0, 0]} barSize={24} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

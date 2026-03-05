@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --latam-blue: #001664;
-  --latam-red: #E60019;
+  --latam-blue: #000066;
+  --latam-red: #e61e6e;
+  --latam-gray: #4d4d4d;
 }
 
 body {

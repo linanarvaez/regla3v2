@@ -8,8 +8,9 @@ module.exports = {
     extend: {
       colors: {
         latam: {
-          blue: '#001664',
-          red: '#E60019',
+          blue: '#000066',
+          red: '#e61e6e',
+          gray: '#4d4d4d',
         }
       }
     },
